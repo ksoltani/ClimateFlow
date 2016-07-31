@@ -67,10 +67,14 @@ def time_select():
     print(len(data))
     #plot = GMapPlot(x_range=DataRange1d(), y_range=DataRange1d(), map_options=map_options, api_key = "AIzaSyATf-qiN-NRPnEUchZqGHEjPUYESAdjavY")
     #plot.title.text = "Queensland"
+     
+    map_options = GMapOptions(lat=-23, lng=144, map_type="roadmap", zoom=5)
     source.data = dict(
-        lat=sLat,
-        lon=sLon,
+     lat=sLat,
+     lon=sLon,
      )
+    plot = GMapPlot(x_range=DataRange1d(), y_range=DataRange1d(), map_options=map_options, api_key = "AIzaSyATf-qiN-NRPnEUchZqGHEjPUYESAdjavY")
+    plot.add_glyph(source, circle)
     #circle = Circle(x="lon", y="lat", size=15, fill_color="blue", fill_alpha=0.8, line_color=None)   
     #plot.add_glyph(source, circle)
     #source.trigger('data', source.data, source.data)
