@@ -10,6 +10,7 @@ from math import log
 import zipfile
 import os.path
 import pickle
+from glob import glob
 
 def makeDirectories(stationFilename):
     """ Return stationsDirectory and stationYearDirectory """
@@ -161,3 +162,5 @@ if __name__ == '__main__':
     data = getChosenData(8, 1992, sYDir, sDir)
     lat, lon, temp = plotFormat(data)
     print(lat[0:5], lon[0:5], temp[0:5])
+    files = glob('*.csv')
+    for filename in files: os.remove(filename)
