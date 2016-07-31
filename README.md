@@ -14,8 +14,3 @@ This could be used for visualizing past data and predicting daily/monthly weathe
 
 In the current version, the code is limited to visualizing max temperature data from 312 stations in Queensland, as downloading data from 18000 stations itself was taking more than 40 hrs (to download all the files). It is easily extendible to all Australian stations, and this work will be completed in the meanwhile, after the GovHack weekend.
 
-The folders you will find are:
-
-/data: this folder contains a file getData.py, which reads the Queensland Station Number data from the alphaQLD_36.txt and uses BeautifulSoup to download the weather station data (zip files) on to the local machine. 
-/climateflow: this folder contains code to use the the downloaded data to visualize max temperature data from across Queensland and plots it on a map of Queensland/Australia based on the longitude and latitude information in the Weather Station data files. This overlay of temperature data on the map is time-dependent, so we can visualize data from the early 1900s till present for most stations.
-/
